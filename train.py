@@ -61,7 +61,7 @@ if __name__ == '__main__':
     np.random.seed(0)
 
     # change checkpoint directory
-    folder = 'bline'
+    folder = 'new'
     ckpt_folder = os.path.join(os.getcwd(), "Models", folder)
     if not os.path.exists(ckpt_folder):
         os.makedirs(ckpt_folder)
@@ -81,7 +81,7 @@ if __name__ == '__main__':
     action_space += [2]  # analyse defender
     action_space += [15, 24, 25, 26, 27]  # remove defender and user hosts
 
-    start_actions = [1004, 1004, 1000] # user 2 decoy * 2, ent0 decoy
+    # start_actions = [1004, 1004, 1000] # user 2 decoy * 2, ent0 decoy
 
     print_interval = 50
     save_interval = 200
@@ -100,4 +100,4 @@ if __name__ == '__main__':
               update_timestep=update_timesteps, K_epochs=K_epochs,
               eps_clip=eps_clip, gamma=gamma, lr=lr,
               betas=[0.9, 0.990], ckpt_folder=ckpt_folder,
-              print_interval=print_interval, save_interval=save_interval, start_actions=start_actions)
+              print_interval=print_interval, save_interval=save_interval)
