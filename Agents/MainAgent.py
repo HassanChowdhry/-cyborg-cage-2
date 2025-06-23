@@ -66,11 +66,11 @@ class MainAgent(PPOAgent):
                        deterministic=True, training=False)
 
 
-    def fingerprint_meander(self):
-        return np.sum(self.scan_state) == 3
+    # def fingerprint_meander(self):
+        # return np.sum(self.scan_state) == 3
 
-    def fingerprint_bline(self):
-        return np.sum(self.scan_state) == 2
+    # def fingerprint_bline(self):
+        # return np.sum(self.scan_state) == 2
 
     def end_episode(self):
         self.scan_state = np.zeros(10)
